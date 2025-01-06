@@ -8,3 +8,4 @@ Just start the program as administrator and enjoy your game.
 
 WARNING!!!
 do not close the program while writing anything other than waiting for cs2 on the screen
+You need to close cs2 firts
