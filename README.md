@@ -18,3 +18,4 @@ Just start the program as administrator and enjoy your game.
 
 Don't close the program while writing anything other than waiting for cs2 on the screen.
 **You need to close cs2 firts**
+  // This fixed in next update
