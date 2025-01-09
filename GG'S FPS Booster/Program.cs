@@ -160,7 +160,6 @@ namespace GG_S_FPS_Booster
                             Console.WriteLine(ex.Message);
                         }
                     };
-                    Console.ReadLine();
                     csProcess.PriorityClass = ProcessPriorityClass.RealTime;
                     csProcess.PriorityBoostEnabled = true;
                     csProcess.ProcessorAffinity = (IntPtr)highCore;
