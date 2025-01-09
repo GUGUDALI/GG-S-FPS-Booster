@@ -13,9 +13,3 @@ When the game process exits, the program restores the original settings of all p
 Overall, the program aims to enhance the gaming experience by dynamically managing system resources to prioritize the game process.
 
 Just start the program as administrator and enjoy your game.
-
-**WARNING!!!**
-
-Don't close the program while writing anything other than waiting for cs2 on the screen.
-**You need to close cs2 firts**
-  // This fixed in next update
