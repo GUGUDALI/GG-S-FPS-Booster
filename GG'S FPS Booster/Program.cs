@@ -267,7 +267,39 @@ namespace GG_S_FPS_Booster
         {
             try
             {
-                RestoreSettings();
+                if (processList != null)
+                {
+                    WriteConsole("Restoring Settings...", ConsoleColor.Yellow);
+                    processes = Process.GetProcesses();
+                    foreach (var process in processes)
+                    {
+                        try
+                        {
+                            foreach (var exProcess in processList){
+                                try
+                                {
+                                    if (exProcess.ProcessID==process.Id){
+                                        process.PriorityClass = exProcess.ProcessPriorityClass;
+                                        process.PriorityBoostEnabled = exProcess.PriorityBoostEnabled;
+                                        if (!exList.Contains(process.ProcessName))
+                                        {
+                                            process.ProcessorAffinity = exProcess.ProcessorAffinity;
+                                        }
+                                    }
+                                }catch{}
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                    }
+                    csProcess = null;
+                    processList = null;
+                    iscsFinded = false;
+                    WriteConsole("Settings restored.", ConsoleColor.Yellow);
+                    Thread.Sleep(3000);
+                }
             }
             catch (Exception ex)
             {
